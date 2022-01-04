@@ -1,6 +1,6 @@
 export class contributorStats {
     total: number | undefined;
-    weeks: [weekActions] | undefined;
+    weeks: weekActions[] | undefined;
 }
  
 export class weekActions {

@@ -19,16 +19,16 @@ export class GitHubService {
     return this.http.get(this.baseURL + 'users/' + userName + '/repos')
   }
 
-  getContributorStats(userName: string): Observable<any> {
-    return this.http.get(this.baseURL + 'users/' + userName + '/repos')
+  getContributorStats(userName: string, repoName:string): Observable<any> {
+    return this.http.get(this.baseURL + 'repos/' + userName +'/' + repoName +'/contributors')
   }
   // 'use strict';
 
-// async function countGithub(repo) {
-//     const response = await fetch(`https://api.github.com/repos/${userName}/{repoName}/contributors`)
-//     const contributors = await response.json();
-//     const lineCounts = contributors.map(contributor => (
-//         contributor.weeks.reduce((lineCount, week) => lineCount + week.a - week.d, 0)
+//   countGithub(userName: string,repoName:string) {
+//     const response = fetch(`https://api.github.com/repos/${userName}/${repoName}/contributors`)
+//     const contributors = response;
+//     const lineCounts = contributors.map((contributorStats: { weeks: any[]; }) => (
+//       contributorStats.weeks.reduce((lineCount: any, week: { a: any; d: number; }) => lineCount + week.a - week.d, 0)
 //     ));
 //     const lines = lineCounts.reduce((lineTotal, lineCount) => lineTotal + lineCount);
 //     window.alert(lines);
