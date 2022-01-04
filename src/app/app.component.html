@@ -14,6 +14,8 @@
  
 <!-- <input type="text" [(ngModel)]="userName" placeholder="unsername" (keyup)="getRepos()"/> -->
 <input type="text" [(ngModel)]="userName" placeholder="unsername"/>
+<p>nom du repo: </p>
+<input type="text" [(ngModel)]="repoName" placeholder="phrepoName"/>
 <button (click)="getRepos()">Click me to get Repos!</button>
 
 <table class='table'>
@@ -36,6 +38,9 @@
 </table> 
  
 <pre>{{repos | json}}</pre>
+<p>OLEEEEEEEEEEEEEEE PAGE BREAK</p>
+<br><br><br><br><br>
+<pre>{{contributorStatsArray | json}}</pre>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
